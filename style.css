@@ -1,0 +1,202 @@
+:root {
+    --input-height: 50px;
+    --icon-padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(-45deg, #f16a70, #b1d877, #8cdcda, #4d4d4d); 
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+nav {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    font-size: small;
+}
+
+nav > * {
+    margin: 5px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav img {
+    height: 5vh;
+    width: 5vh;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+form {
+    width: 47.5vw;
+}
+
+.main-logo {
+    width: 100%;
+    padding: 0 20% 5vh;
+}
+
+.search-input input {
+    width: 100%;
+    height: var(--input-height);
+    border-radius: calc(var(--input-height) / 2);
+    padding: 0 var(--input-height);
+    border: 1px solid #dfe1e5;
+    font-size: 16px;
+}
+
+.search-input input:focus,
+.search-input input:hover {
+    outline: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+ 
+.search-input {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 25%;
+    opacity: 0.35;
+}
+
+.mic-icon{
+    right: var(--icon-padding);
+}
+
+.search-icon{
+    left: var(--icon-padding);
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button{
+    color: #3ec043;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border: none;
+    margin: 5vh 1vh 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.buttons button:hover {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0);
+}
+
+form p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* CSS untuk fitur tambahan */
+footer {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+footer a {
+    color: rgba(0,0,0,.54);
+}
+
+.data {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+footer upper {
+    color: rgba(0,0,0,.54);
+    padding: 13.5px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+footer down {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 13.5px 30px;
+}
+
+footer info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+footer utility {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-left: 30px;
+    justify-self: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    footer {
+      font-size: 11px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    footer {
+      font-size: 9px;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    footer {
+      font-size: 7px;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
